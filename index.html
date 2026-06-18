@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body >
+<nav>
+  <button id = "theme-switch">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M600-640 480-760l120-120 120 120-120 120Zm200 120-80-80 80-80 80 80-80 80ZM483-80q-84 0-157.5-32t-128-86.5Q143-253 111-326.5T79-484q0-146 93-257.5T409-880q-18 99 11 193.5T520-521q71 71 165.5 100T879-410q-26 144-138 237T483-80Z"/></svg>
+
+    
+  </button>
+  <ul class = "slidebar">
+    <li onclick="hideSlidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+    <li><a href="#">Search</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Product</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Login</a></li>
+  </ul>
+  <ul>
+    
+    <li class = "hideOnMobile"><a href="#">Search</a></li>
+    <li class = "hideOnMobile"><a href="#">About</a></li>
+    <li class = "hideOnMobile"><a href="#">Product</a></li>
+    <li class = "hideOnMobile"><a href="#">Blog</a></li>
+    <li class = "hideOnMobile"><a href="#">Login</a></li>
+    <li class = "menu-button"  onclick="showSlidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+  </ul>
+</nav>
+  
+  
+  
+
+  <h1>Task Manager</h1>
+
+  <div class="wrapper">
+
+    <form>
+      <input
+        id="todo-input"
+        type="text"
+        placeholder="write anything and hit enter to add"
+        autocomplete="off"
+      >
+
+      <button id="add-button">ADD</button>
+    </form>
+
+    <ul id="todo-list">
+
+      <!-- <li class="todo">
+        <input type="checkbox" id="todo-1">
+
+        <label class="custom-checkbox" for="todo-1">
+          <svg fill="transparent" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+          </svg>
+        </label>
+
+        <label for="todo-1" class="todo-text">
+          webdev project with html, css and js
+        </label>
+
+        <button class="delete-button">
+          <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+          </svg>
+        </button>
+      </li>
+
+      <li class="todo">
+        <input type="checkbox" id="todo-2">
+
+        <label class="custom-checkbox" for="todo-2">
+          <svg fill="transparent"  xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+          </svg>
+        </label>
+
+        <label for="todo-2" class="todo-text">
+          webdev project with html, css and js
+        </label>
+
+        <button class="delete-button">
+          <svg fill="var(--secondary-color)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+          </svg>
+        </button>
+      </li> -->
+
+    </ul>
+
+  </div>
+
+  <script src="script.js" defer>
+  </script>
+
+</body>
+</html>
